@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LTH-2</title>
+</head>
+<body>
+	
+
+
+	<script>
+		var tanya=true;
+		while(tanya){
+			var bahasa = prompt('Masukan Nama Bahasa Pemrograman dibawah ini: \n html, css, javascript, php, java, dan python.');
+
+			switch(bahasa){
+				case 'html':
+				case 'css' :
+				case 'javascript' :
+				case 'php' :
+					alert('Bahasa yang anda masukan adalah bahasa pemrograman website');
+					break;
+				case 'java' :
+				case 'python' :
+					alert('Bahasa yang anda masukan adalah bahasa pemrograman Android');
+					break;
+				default :
+					alert('Bahasa yang anda masukan salah');
+					break;
+			}
+			tanya = confirm('Mau mencoba lagi?');
+		}
+		alert('Terimakasih dan semoga senang!');
+	</script>
+</body>
+</html>
