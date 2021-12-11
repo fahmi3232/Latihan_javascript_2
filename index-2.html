@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1></h1>
+</body>
+
+
+
+	<script>
+
+		var konfir = true;
+		while (konfir){
+			alert(`Selamat datang di game tebak angka: \n1. Kalian diminta untuk menebak angka 1-3 \n2. Pemain yang berhasil menebak angka akan menang \nSelamat bermain!!!`);
+			alert('Ronde Ke-1');
+			
+			for (var ronde = 1; ronde <= 3;ronde++ ){
+			var p1 = prompt('Masukan Angka:');
+			var p2 = prompt('Masukan Angka:');
+
+			var comp = Math.random();
+			var angkaWajib = 3;
+
+			if (comp < 0.40){
+				comp = '2'; 
+			} else if(comp > 0.40 && comp <= 0.80){
+				comp = '3';
+			} else{
+				comp = '1';
+			}
+
+			if (p1 > angkaWajib){
+				p1 = 'Angka Tidak Boleh Lebih dari 3';
+			} else if (p2 > angkaWajib){
+				p2 = 'Angka Tidak Boleh Lebih dari 3';
+			} else {
+				'Mohon Diulang Kembali';
+			}
+
+			var hasil = '';
+
+			if (p1 == comp){
+				hasil = (p1 == comp) ? 'Player 1 Menang' : 'Kalah'; 			
+			} else if (p2 == comp){
+				hasil = (p2 == comp) ? 'Player 2 Menang' : 'Kalah';
+			} else if (p1 == p2){
+				hasil = 'Seri';
+			} else{
+				hasil = 'Keduanya Salah';
+			}
+
+
+			alert('Player 1: ' + " " + p1 + '\nPlayer 2: ' + " " + p2 + '\nKomputer: ' + comp + '\nMaka Hasilnya: ' + hasil);
+			}
+
+		konfir = confirm('Mau Mencoba Lagi???');
+
+		}
+
+		alert('Terimakasih');
+			// if(p1 == comp > p2 == comp){
+			// 	alert('Selamat Player 1 Menang');
+			// } else if(p2 == comp > p1 == comp){
+			// 	alert('Selamat Player 2 Menang');
+			// } else if (p1 && p2 == comp){
+			// 	alert('Seri');
+			// } else{
+			// 	alert('Kalah');
+			// }
+
+	</script>
+</html>
